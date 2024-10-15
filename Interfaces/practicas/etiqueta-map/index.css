@@ -1,0 +1,39 @@
+/* :root{
+    color-scheme: light dark;
+} */
+
+body{
+    background-color: #1B3D60;
+}
+
+h1{
+    margin: 20px auto;
+    display: block;
+    font-family: monospace;
+    border-right: 4px solid;
+    white-space: nowrap;
+    /* caracteres del texto */
+    width: 21ch;
+
+    animation: write 3s steps(21),
+              blink 0.5s infinite step-end alternate;
+
+    overflow: hidden;
+}
+
+@keyframes write {
+    from{
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+
+.img{
+    display: grid;
+    place-items: center;
+}
