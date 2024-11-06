@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimación de Ventas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.table-container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4a4a4a;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+
+</style>
+<body>
+    <div class="table-container">
+        <table>
+            <caption>Estimación de Ventas</caption>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Unidades</th>
+                    <th>Previsión 2013</th>
+                    <th>Previsión 2014</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Art. 1</td>
+                    <td style="color: blue;">6000</td>
+                    <td>4000</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>Art. 2</td>
+                    <td>50</td>
+                    <td style="color: red;" colspan="3">0</td>
+                </tr>
+                <tr>
+                    <td>Art. 3</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Art. 4</td>
+                    <td>300</td>
+                    <td colspan="2"><b>210</b></td>
+                </tr>
+                <tr>
+                    <td>Art. 5</td>
+                    <td>90</td>
+                    <td rowspan="2"><b>100</b></td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Art. 6</td>
+                    <td>80</td>
+                    <td>110</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<br>
+
+<br>
+    <p><a href="ej3.html">Siguiente</a></p>
+
+</body>
+</html>

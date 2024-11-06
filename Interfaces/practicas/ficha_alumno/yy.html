@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+body{
+    background-color: cornsilk;
+}
+
+
+h2 {
+    color: #007bff;
+    border-bottom: 1px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.photo-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.photo-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+</style>
+<body>
+
+<div style="margin-left: 330px; background-color: rgb(233, 219, 201); width: 60%; height: 100%;">
+    <h2 style="padding-left: 30px;">Datos identificativos</h2>
+        <div class="profile-section" style="padding-left: 30px;">
+            <div class="profile-photo">
+                <img src="placeholder.jpg" alt="Foto de perfil">
+                <div class="photo-info">
+                    <h3>Nombre Apellido1 Apellido2</h3>
+                    <p>Edad: 32 años</p>
+                    <button>EDITAR FOTO</button>
+                </div>
+            </div>
+        </div>
+
+    <form action="POST" style="padding-left: 30px;">
+
+        <!-- orimera fila -->
+        <div style="display: flex;">
+            <div>
+                <label for=""><span style="color: red;">*</span>Tipo de identificacion del alumno/a:</label><br>
+                <select id="" name="" style="width: 100%;">
+                    <option value="">DNI</option>
+                    <option value="">NIF</option>
+                    <option value="">NIE</option>
+                </select>
+            </div>
+
+            <div style="margin-left: 40px;">
+                <label for=""><span style="color: red;">*</span>DNI/Pasaporte:</label><br>
+                <input type="text" id="" name="" style="width: 100%;">
+            </div>
+
+            <div style="margin-left: 50px;">
+                <label for=""><span style="color: red;">*</span>Fecha de alta:</label><br>
+                <input type="date" id="" name="" style="width: 180%;">
+            </div>
+        </div>
+
+
+
+        <!-- segunda fila -->
+         <div style="display: flex; margin-top: 15px;">
+
+            <div>
+                <label for=""><span style="color: red;">*</span>Nombre:</label><br>
+                <input type="text" id="" name="" style="width: 135%;">
+            </div>
+
+            <div style="margin-left: 110px;">
+                <label for=""><span style="color: red;">*</span>Primer Apellido:</label><br>
+                <input type="text" id="" name="" style="width: 100%;">
+            </div>
+
+            <div style="margin-left: 50px;">
+                <label for=""><span style="color: red;"></span>Segundo Apellido:</label><br>
+                <input type="text" id="" name="" style="width: 120%;">
+            </div>
+        </div>
+
+        <!-- tercera fila -->
+        <div style="display: flex; margin-top: 15px;">
+            <div>
+                <label for=""><span style="color: red;">*</span>Nacionalidad:</label><br>
+                <select id="" name="" style="width: 470%;">
+                    <option value="">Española</option>
+                    <option value="">Extranjera</option>
+                </select>
+            </div>
+
+            <div style="margin-left: 400px;">
+                <label for=""><span style="color: red;">*</span>Número de la seguridad social:</label><br>
+                <input type="number" id="" name="" style="width: 100%;">
+            </div>
+        </div>
+
+
+        <!-- cuarta fila -->
+        <div style="display: flex; margin-top: 15px;">
+            <div>
+                <label for=""><span style="color: red;">*</span>Tlfn. personal del alumno/a:</label><br>
+                <input type="number" style="width: 240%;">
+            </div>
+
+            <div style="margin-left: 310px;">
+                <label for=""><span style="color: red;">*</span>Número de la seguridad social:</label><br>
+                <input type="number" id="" name="" style="width: 100%;">
+            </div>
+        </div>
+
+
+        <!-- siguiente parte -->
+
+        <h2>Datos de nacimiento</h2>
+
+        <!-- primera fila -->
+        <div style="display: flex;">
+
+            <div>
+                <label for=""><span style="color: red;">*</span>Fecha de nacimiento:</label><br>
+                <input type="date" id="" name="" style="width: 160%;">
+            </div>
+
+           
+            <div style="margin-left: 135px;">
+                <label for=""><span style="color: red;">*</span>Edad:</label><br>
+                <input type="number" id="" name="" style="width: 100%;">
+            </div>
+
+            
+            <div style="margin-left: 50px;">
+                <label for=""><span style="color: red;">*</span>Sexo:</label><br>
+                <input type="radio" id="sexo-hombre" name="sexo" value="hombre">
+                <label for="sexo-hombre">Hombre</label>
+                <input type="radio" id="sexo-mujer" name="sexo" value="mujer">
+                <label for="sexo-mujer">Mujer</label>
+
+                <label for=""><span style="color: red;">*</span>¿Alumno emancipado?</label>
+                <input type="checkbox" name="" id="">
+            </div>
+        </div>
+
+        <!-- segunda fila -->
+        <!-- pais -->
+        <div style="display: flex; margin-top: 15px;">
+            <div>
+                <label for=""><span style="color: red;">*</span>País de nacimiento:</label><br>
+                <select id="" name="" style="width: 177%;">
+                    <option value="">España</option>
+                    <option value="">Extranjera</option>
+                </select>
+            </div>
+
+            <!-- provincia -->
+            <div style="margin-left: 146px;">
+                <label for=""><span style="color: red;">*</span>Provincia:</label><br>
+                <select id="" name="" style="width: 210%;">
+                    <option value="">Madrid</option>
+                    <option value="">Barcelona</option>
+                    <option value="">Valencia</option>
+                </select>
+            </div>
+
+            <!-- municipio -->
+            <div style="margin-left: 140px;">
+                <label for=""><span style="color: red;">*</span>Municipio:</label><br>
+                <select id="" name="" style="width: 390%;">
+                    <option value="">Madrid</option>
+                    <option value="">Barcelona</option>
+                    <option value="">Valencia</option>
+                </select>
+            </div>
+            
+        </div>
+
+
+
+        <!-- cuarta fila -->
+        
+         <div style="display: flex; margin-top: 15px;">
+            <div>
+                <label for=""><span style="color: red;">*</span>Tipo de via:</label><br>
+                <select id="" name="" style="width: 280%;">
+                    <option value="">Calle</option>
+                    <option value="">Avenida</option>
+                    <option value="">Plaza</option>
+                </select>
+            </div>
+
+            
+            <div style="margin-left: 195px;">
+                <label for=""><span style="color: red;">*</span>Dirección:</label><br>
+                <input type="text" id="" name="" style="width: 322%;">
+            </div>
+         </div>
+        
+            
+        <!-- quinta fila -->
+
+        <!-- numero, escalera, piso, letra, c.p.-->
+        
+         <div style="display: flex; margin-top: 15px;">
+            <div>
+                <label for=""><span style="color: red;">*</span>Número:</label><br>
+                <input type="number" id="" name="" style="width: 70%;">
+            </div>
+        
+            <div style="margin-left: 5px;">
+                <label for="">Escalera:</label><br>
+                <input type="text" id="" name="" style="width: 70%;">
+            </div>
+
+            <div style="margin-left:  8px;">
+                <label for="">Piso:</label><br>
+                <input type="text" id="" name="" style="width: 70%;">
+            </div>
+
+            <div style="margin-left: 8px;">
+                <label for="">Letra:</label><br>
+                <input type="text" id="" name="" style="width: 70%;">
+            </div>
+
+            <div style="margin-left: 5px;">
+                <label for=""><span style="color: red;">*</span>C.P.:</label><br>
+                <input type="text" id="" name="" style="width: 70%;">
+            </div>
+         </div>
+
+         <!-- textarea -->
+          <div style="margin-top: 15px; margin-left: 30px;">
+            <div>
+                <label for="">Observaciones:</label><br>
+                <textarea id="" name="" cols="30" rows="5" style="width: 750px; resize: none;"></textarea>
+            </div>
+         </div>
+
+    </form>
+</div>
+</body>
+</html>

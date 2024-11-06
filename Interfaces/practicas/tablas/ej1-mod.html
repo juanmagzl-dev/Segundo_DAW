@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: yellow;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: blue;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+
+        /* css tablas */
+        }
+        .tabla-animales {
+            margin-top: 10px;
+        }
+        .tabla-animales th, .tabla-animales td {
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+
+        /* css form */
+
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], select, textarea {
+            padding: 5px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tema 1</h1>
+    <ol>
+        <li>
+            <h2>Los invertebrados</h2>
+            <p>Los invertebrados son como los vertebrados pero blábláblá</p>
+        </li>
+        <li>
+            <h2>Tabla de animales</h2>
+            <table class="tabla-animales">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Longitud media</th>
+                </tr>
+                <tr>
+                    <td>Caracol</td>
+                    <td>5 cm.</td>
+                </tr>
+                <tr>
+                    <td>Lombriz de tierra</td>
+                    <td>20 cm</td>
+                </tr>
+            </table>
+        </li>
+    </ol>
+
+    <!-- formulario -->
+    <h2>Puede enviar un email:</h2>
+    <form>
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto">
+        
+        <label for="desplegable">Desplegable:</label>
+        <select id="desplegable" name="desplegable">
+            <option>Valor1</option>
+            <option>Valor2</option>
+            <option>Valor3</option>
+        </select>
+        
+        <label for="contenido">Contenido:</label>
+        <textarea id="contenido" name="contenido"></textarea><br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p><a href="ej2.html">Siguiente</a></p>
+
+</body>
+</html>
