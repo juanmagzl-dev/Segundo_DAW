@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="andalucia-icon.png" type="image/x-icon">
+    <title>Mapa de Andalucía - SIN JAVASCRIPT</title>
+    <style>
+        body {
+            background-color: #1B3D60;
+        }
+
+        h1 {
+            margin: 20px auto;
+            display: block;
+            font-family: monospace;
+            border-right: 4px solid;
+            white-space: nowrap;
+            width: 21ch;
+            animation: write 3s steps(21), blink 0.5s infinite step-end alternate;
+            overflow: hidden;
+            color: white;
+        }
+
+        @keyframes write {
+            from {
+                width: 0;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .img {
+            display: grid;
+            place-items: center;
+        }
+
+        iframe {
+            border: 1px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mapa de Andalucía 
+        <img src="andalucia-icon.png" alt="Icono de Andalucía" width="32px">
+    </h1>
+
+    <div class="img">
+        <img src="file.png" alt="Mapa de Andalucía" usemap="#image-map">
+    </div>
+
+    <map name="image-map">
+
+        <area alt="Huelva" title="Huelva" 
+              href="andalucia/huelva.html" 
+              target="provinceFrame"
+              coords="139,169,144,302,21,239,48,137,113,116,182,148,170,166,153,168,148,166,145,166" 
+              shape="poly">
+
+        <area alt="Sevilla" title="Sevilla" 
+              href="andalucia/sevilla.html" 
+              target="provinceFrame"
+              coords="216,108,146,184,179,300,317,274,331,226,253,129" 
+              shape="poly">
+
+        <area alt="Córdoba" title="Córdoba" 
+              href="andalucia/cordoba.html" 
+              target="provinceFrame"
+              coords="278,155,365,250,433,222,402,87,344,45,295,29,277,59,255,64,253,104" 
+              shape="poly">
+
+        <area alt="Jaén" title="Jaén" 
+              href="andalucia/jaen.html" 
+              target="provinceFrame"
+              coords="406,75,438,222,563,186,618,106,603,62" 
+              shape="poly">
+              
+        <area alt="Cádiz" title="Cádiz" 
+              href="andalucia/cadiz.html" 
+              target="provinceFrame"
+              coords="153,297,295,288,259,346,278,397,237,434,168,375" 
+              shape="poly">
+              
+        <area alt="Málaga" title="Málaga" 
+              href="andalucia/malaga.html" 
+              target="provinceFrame"
+              coords="265,346,280,380,457,316,404,285,390,252,351,254,317,275" 
+              shape="poly">
+              
+        <area alt="Granada" title="Granada" 
+              href="andalucia/granada.html" 
+              target="provinceFrame"
+              coords="411,287,464,321,535,318,596,227,628,199,636,141,598,147,484,208,407,241" 
+              shape="poly">
+              
+        <area alt="Almería" title="Almería" 
+              href="andalucia/almeria.html" 
+              target="provinceFrame"
+              coords="539,320,653,325,714,230,659,150" 
+              shape="poly">
+              
+    </map>
+
+    <iframe id="provinceFrame" name="provinceFrame" 
+            title="Datos de la provincia" src="andalucia/sevilla.html" 
+            width="600" height="400"></iframe>
+</body>
+</html>
