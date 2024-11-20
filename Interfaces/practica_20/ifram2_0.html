@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería con Iframes - sin Javascript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin-top: 15px;
+            display: none;
+        }
+
+        iframe:target {
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería con Iframes - sin Javascript</h1>
+    <h3>Reproduciendo debajo de las imagenes</h3>
+
+    <div class="gallery">
+        <!-- Primer elemento -->
+        <div class="gallery-item">
+            <img src="img/img.jpg" alt="Audio 1">
+            <a href="#iframe1">Escuchar: Canción 1</a>
+        </div>
+
+        <!-- Segundo elemento -->
+        <div class="gallery-item">
+            <img src="img/img2.jpg" alt="Audio 2">
+            <a href="#iframe2">Escuchar: Canción 2</a>
+        </div>
+
+        <!-- Tercer elemento -->
+        <div class="gallery-item">
+            <img src="img/img3.jpg" alt="Audio 3">
+            <a href="#iframe3">Escuchar: Canción 3</a>
+        </div>
+
+        <!-- Cuarto elemento -->
+        <div class="gallery-item">
+            <img src="img/img4.jpg" alt="Audio 4">
+            <a href="#iframe4">Escuchar: Canción 4</a>
+        </div>
+
+        <!-- Quinto elemento -->
+        <div class="gallery-item">
+            <img src="img/img5.jpg" alt="Audio 5">
+            <a href="#iframe5">Escuchar: Canción 5</a>
+        </div>
+
+        <!-- Sexto elemento -->
+        <div class="gallery-item">
+            <img src="img/img6.jpg" alt="Audio 6">
+            <a href="#iframe6">Escuchar: Canción 6</a>
+        </div>
+    </div>
+
+    <!-- Iframes -->
+    <iframe id="iframe1" src="audiohtml/audio1.html"></iframe>
+    <iframe id="iframe2" src="audiohtml/audio2.html"></iframe>
+    <iframe id="iframe3" src="audiohtml/audio3.html"></iframe>
+    <iframe id="iframe4" src="audiohtml/audio4.html"></iframe>
+    <iframe id="iframe5" src="audiohtml/audio5.html"></iframe>
+    <iframe id="iframe6" src="audiohtml/audio6.html"></iframe>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería con Reproductor MP3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        #player-container {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #player-container p {
+            margin: 0 0 10px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        #player-container audio {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería con Reproductor MP3 - con javascript</h1>
+    <h3>Resproduciendo al hacer click en la imagen</h3>
+
+    <div class="gallery">
+        <img src="img/img.jpg" alt="Canción 1" data-audio="audio/audio1.mp3" aria-label="Canción 1">
+        <img src="img/img2.jpg" alt="Canción 2" data-audio="audio/audio2.mp3" aria-label="Canción 2">
+        <img src="img/img3.jpg" alt="Canción 3" data-audio="audio/audio3.mp3" aria-label="Canción 3">
+        <img src="img/img4.jpg" alt="Canción 4" data-audio="audio/audio4.mp3" aria-label="Canción 4">
+        <img src="img/img5.jpg" alt="Canción 5" data-audio="audio/audio5.mp3" aria-label="Canción 5">
+        <img src="img/img6.jpg" alt="Canción 6" data-audio="audio/audio6.mp3" aria-label="Canción 6">
+    </div>
+
+    <div id="player-container">
+        <p>Reproduciendo: <span id="audio-name"></span></p>
+        <audio id="audio-player" controls>
+            <source id="audio-source" src="audio/audio1.mp3" type="audio/mpeg">
+            
+        </audio>
+    </div>
+
+    <script>
+        // Seleccionar las imágenes y el contenedor del reproductor
+        const images = document.querySelectorAll('.gallery img');
+        const playerContainer = document.getElementById('player-container');
+        const audioPlayer = document.getElementById('audio-player');
+        const audioSource = document.getElementById('audio-source');
+        const audioName = document.getElementById('audio-name');
+
+        // Agregar evento click a cada imagen
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                const audioFile = img.getAttribute('data-audio');
+                const altText = img.getAttribute('alt');
+
+                if (audioFile) {
+                    // Actualizar el reproductor
+                    audioSource.src = audioFile;
+                    audioName.textContent = altText;
+
+                    // Mostrar el contenedor del reproductor
+                    playerContainer.style.display = 'block';
+
+                    // Reproducir automáticamente
+                    audioPlayer.load();
+                    audioPlayer.play();
+                } else {
+                    console.error('No se encontró el archivo de audio.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

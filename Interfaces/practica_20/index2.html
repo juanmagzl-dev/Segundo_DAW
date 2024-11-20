@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería con Reproductor MP3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .player {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .player:target {
+            display: block;
+        }
+
+        .player audio {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería con Reproductor MP3 - sin javascript</h1>
+    <h3>Reproduciendo al hacer click en cada imagen</h3>
+
+    <div class="gallery">
+        <a href="#player1"><img src="img/img.jpg" alt="Reproductor 1"></a>
+        <a href="#player2"><img src="img/img2.jpg" alt="Reproductor 2"></a>
+        <a href="#player3"><img src="img/img3.jpg" alt="Reproductor 3"></a>
+        <a href="#player4"><img src="img/img4.jpg" alt="Reproductor 4"></a>
+        <a href="#player5"><img src="img/img5.jpg" alt="Reproductor 5"></a>
+        <a href="#player6"><img src="img/img6.jpg" alt="Reproductor 6"></a>
+    </div>
+
+    <div id="player1" class="player">
+        <p>Reproduciendo: Canción 1</p>
+        <audio controls>
+            <source src="audio/audio1.mp3" type="audio/mpeg">
+            
+        </audio>
+        <br><a href="#">Cerrar</a>
+    </div>
+
+    <div id="player2" class="player">
+        <p>Reproduciendo: Canción 2</p>
+        <audio controls>
+            <source src="audio/audio2.mp3" type="audio/mpeg">
+            
+        </audio>
+        <br><a href="#">Cerrar</a>
+    </div>
+
+    <div id="player3" class="player">
+        <p>Reproduciendo: Canción 3</p>
+        <audio controls>
+            <source src="audio/audio3.mp3" type="audio/mpeg">
+            
+        </audio>
+        <br><a href="#">Cerrar</a>
+    </div>
+
+    <div id="player4" class="player">
+        <p>Reproduciendo: Canción 4</p>
+        <audio controls>
+            <source src="audio/audio4.mp3" type="audio/mpeg">
+            
+        </audio>
+        <br><a href="#">Cerrar</a>
+    </div>
+
+    <div id="player5" class="player">
+        <p>Reproduciendo: Canción 5</p>
+        <audio controls>
+            <source src="audio/audio5.mp3" type="audio/mpeg">
+            Tu navegador no soporta el reproductor de audio.
+        </audio>
+        <br><a href="#">Cerrar</a>
+    </div>
+
+    <div id="player6" class="player">
+        <p>Reproduciendo: Canción 6</p>
+        <audio controls>
+            <source src="audio/audio6.mp3" type="audio/mpeg">
+            
+        </audio>
+        <br>
+        <a href="#">Cerrar</a>
+    </div>
+</body>
+</html>
